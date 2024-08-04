@@ -15,7 +15,7 @@ do
 
     b=$((a+1))
     # write to main for index
-    echo "<h2>QR $a: Put $b in $i</h2>" >> main.html
+    echo "<h2>QR $a: Put <a href='$b.html'>$b</a> in $i</h2>" >> main.html
     # generate QR page
     a=$(echo "$a + 1" | bc)    
 done
