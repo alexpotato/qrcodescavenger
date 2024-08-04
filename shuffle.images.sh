@@ -28,7 +28,7 @@ rows=$(echo "$images / 5" | bc)
 echo "Rows: $rows"
 a=1
 echo "<html><body>" > qr.html
-echo "<table>" >> qr.html
+echo "<table border=1>" >> qr.html
 for r in $(seq 0 $rows)
 do
     echo "<tr>" >> qr.html
