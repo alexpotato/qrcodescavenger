@@ -1,21 +1,31 @@
 #!/bin/bash
 
-ls *.jpeg | sort -R > shuffled.images.txt
+#ls *.jpeg | sort -R > shuffled.images.txt
+
+# get number of images
+images=$(wc -l shuffled.images.txt | cut -d" " -f1)
 
 echo "<html><body>" > main.html
 a=1
 for i in $(cat shuffled.images.txt)
 do
     echo $a
+    # Generate the clue page
     echo "<html><body>" > $a.html
     echo "<h1>Clue: $a</h1>" >> $a.html
     echo "<img style='max-width: 500px;' src='$i'></img>" >> $a.html
     echo "</body>" >> $a.html
     echo "</html>" >> $a.html
 
+    # update the main index page
     b=$((a+1))
     # write to main for index
-    echo "<h2>QR $a: Put <a href='$b.html'>$b</a> in $i</h2>" >> main.html
+    if [ $a -eq $images ]
+    then
+        echo "<h2>QR <a href='$a.html'>$a</a>: This is the end!">> main.html
+    else
+        echo "<h2>QR <a href='$a.html'>$a</a>: Put <a href='$b.html'>$b</a> in $i</h2>" >> main.html
+    fi
     # generate QR page
     a=$(echo "$a + 1" | bc)    
 done
