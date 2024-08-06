@@ -3,8 +3,12 @@
 # get number of images
 images=$(wc -l shuffled.images.txt | cut -d" " -f1)
 
+# start the main html file
+# this will have the location clues for each
+# QR code/image pair
 echo "<html><body>" > main.html
 a=1
+# build a page for each image
 for i in $(cat shuffled.images.txt)
 do
     echo $a
@@ -35,11 +39,12 @@ echo "</html>" >> $a.html
 echo "</body>" >> main.html
 echo "</html>" >> main.html
 
-images=$(wc -l shuffled.images.txt | cut -d" " -f1)
 echo "Images: $images"
 rows=$(echo "$images / 5" | bc)
 echo "Rows: $rows"
 a=1
+# here we build an html page with a table of the QR codes
+# we can cut those out and then put them in the locations
 echo "<html><body>" > qr.html
 echo "<table border=1>" >> qr.html
 for r in $(seq 0 $rows)
