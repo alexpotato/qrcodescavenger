@@ -30,7 +30,7 @@ The below assumes everything is happening in the same directory that you cloned 
     * This will generate:
         * `main.html` that tells you wher eto put each QR code
         * `qr.html` which is a printout of all of the QR codes
-        * Multiple html files in the format `1.htnl` etc that have the photo for the next clue
+        * Multiple html files in the format `1.html` etc that have the photo for the next clue
 
 
 ## Physical Setup
