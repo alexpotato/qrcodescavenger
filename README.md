@@ -29,7 +29,7 @@ The below assumes everything is happening in the same directory that you cloned 
 * Start the local webserver e.g. below starts it on port 9000
     * `python3 -mhttp.server 9000`
 * Open up `generate.qr.sh` and set the URL variable to the hostname and port for your webserver
-    * Use the values from the previoues step
+    * Use the values from the previous step
 * Run the `generate.qr.sh`
     * This will create png files for each of the QR codes
 * Run the `generate.html.sh` script
