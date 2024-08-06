@@ -35,10 +35,10 @@ The below assumes everything is happening in the same directory that you cloned 
 
 ## Physical Setup
 
-* Print out the QR code page
+* Print out the QR code page at `http://hostname:9000/qr.html`
 * Cut out each QR code
     * Make sure to have each QR code slip have the number on it as this makes it easier to keep track of which QR code goes where
-* Print out the `main.html` as this tells you where to put everything
+* Print out the instructions page at `http://hostname:9000/main.html` as this tells you where to put everything
 * Put QR code `1` aside as this is what starts everything off
 * Have someone hide each QR code in the corresponding place using the `main.html` as a guide
 
