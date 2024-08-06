@@ -52,9 +52,9 @@ The below assumes everything is happening in the same directory that you cloned 
 
 ## Playing
 
-* Use a phone/tablet etc to scan QR code 1
 * Make sure your phone is on the same network as the webserver. 
 * Use the phone to lookup QR `1` and it should take you to the first clue
+* Keep going till you get to the "End" page
 * Have fun!
 
 ## Playing Again
