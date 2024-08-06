@@ -22,7 +22,7 @@ The below assumes everything is happening in the same directory that you cloned 
 
 * Take a bunch of photos to use as "clues"
     * e.g. photo of the kitchen, photo of the laundry room etc
-* Save the files with a jpeg extension an dmake the filename descriptive 
+* Save the files with a jpeg extension and make the filename descriptive 
     * e.g. `kitchen.jpeg`
 * Run the `shuffle.images.sh` script
     * This will create a file called `shuffled.images.txt`
