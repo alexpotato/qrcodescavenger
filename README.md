@@ -6,10 +6,16 @@
 
 ## Requirements
 
+Technical:
+
 * Linux or MacOs
 * python3
 * qrencode (or equivalent CLI tool for MacOS)
 
+Sklls:
+
+* Basic command line and networking knowledge
+  
 ## Tech Setup
 
 The below assumes everything is happening in the same directory that you cloned the repo into.
@@ -34,6 +40,8 @@ The below assumes everything is happening in the same directory that you cloned 
 
 
 ## Physical Setup
+
+**NOTE**: Replace `hostname` below with what your actual hostname is for the webserver
 
 * Print out the QR code page at `http://hostname:9000/qr.html`
 * Cut out each QR code
