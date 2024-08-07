@@ -12,7 +12,7 @@ Technical:
 * python3
 * qrencode (or equivalent CLI tool for MacOS)
 
-Sklls:
+Skills:
 
 * Basic command line and networking knowledge
   
@@ -34,7 +34,7 @@ The below assumes everything is happening in the same directory that you cloned 
     * This will create png files for each of the QR codes
 * Run the `generate.html.sh` script
     * This will generate:
-        * `main.html` that tells you wher eto put each QR code
+        * `main.html` that tells you where to put each QR code
         * `qr.html` which is a printout of all of the QR codes
         * Multiple html files in the format `1.html` etc that have the photo for the next clue
 
