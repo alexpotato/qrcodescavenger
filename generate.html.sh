@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# Generate the index.html page
+cat << EOF > index.html
+<html>
+<head>
+<title>QR Code Scavenger Hunt Main Page</title>
+</head>
+<body>
+<h1>QR Code Scavenger Hunt Main Page</h1>
+<p>Pages:</p>
+<ul>
+<li><a href="main.html">List of where to place each QR Code</a></li>
+<li><a href="qr.html">QR Codes to Print out</a></li>
+</ul>
+</body>
+</html>
+EOF
+
 # get number of images
 images=$(wc -l shuffled.images.txt | cut -d" " -f1)
 
