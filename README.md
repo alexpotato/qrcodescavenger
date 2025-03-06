@@ -34,6 +34,7 @@ The below assumes everything is happening in the same directory that you cloned 
     * This will create png files for each of the QR codes
 * Run the `generate.html.sh` script
     * This will generate:
+        * `index.html` that has links to each of the below
         * `main.html` that tells you where to put each QR code
         * `qr.html` which is a printout of all of the QR codes
         * Multiple html files in the format `1.html` etc that have the photo for the next clue
