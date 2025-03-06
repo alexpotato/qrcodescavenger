@@ -61,8 +61,9 @@ echo "</html>" >> $a.html
 echo "</body>" >> main.html
 echo "</html>" >> main.html
 
+IMAGES_PER_ROW=4
 echo "Images: $images"
-rows=$(echo "$images / 5" | bc)
+rows=$(echo "$images / $IMAGES_PER_ROW" | bc)
 echo "Rows: $rows"
 a=1
 # here we build an html page with a table of the QR codes
@@ -72,7 +73,7 @@ echo "<table border=1>" >> qr.html
 for r in $(seq 0 $rows)
 do
     echo "<tr>" >> qr.html
-    for i in $(seq 1 5)
+    for i in $(seq 1 $IMAGES_PER_ROW)
     do
         echo "<td style='padding: 5px;'>" >> qr.html
         echo "<div style='padding:10px;'>" >> qr.html
