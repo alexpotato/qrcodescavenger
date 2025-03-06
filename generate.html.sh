@@ -7,6 +7,7 @@ images=$(wc -l shuffled.images.txt | cut -d" " -f1)
 # this will have the location clues for each
 # QR code/image pair
 echo "<html><body>" > main.html
+echo "<h2>Put <a href='1.html'>1</a> where you want the search to start</h2>" >> main.html
 a=1
 # build a page for each image
 for i in $(cat shuffled.images.txt)
@@ -22,15 +23,19 @@ do
     # update the main index page
     b=$((a+1))
     # write to main for index
-    if [ $a -eq $images ]
-    then
-        echo "<h2>QR <a href='$a.html'>$a</a>: This is the end!">> main.html
-    else
-        echo "<h2>QR <a href='$a.html'>$a</a>: Put <a href='$b.html'>$b</a> in $i</h2>" >> main.html
-    fi
+    #if [ $a -eq $images ]
+    #then
+    #    echo "<h2>This is the end!">> main.html
+    #else
+        echo "<h2>Put <a href='$b.html'>$b</a> in $i</h2>" >> main.html
+    #fi
     # generate QR page
     a=$(echo "$a + 1" | bc)    
 done
+# let people know that we've reached the end
+echo "<h2>This is the end!">> main.html
+
+# generate a clue
 echo "<html><body>" > $a.html
 echo "<h1>Clue: $a</h1>" >> $a.html
 echo "<h2>Congatulations! You've reached the end." >> $a.html
