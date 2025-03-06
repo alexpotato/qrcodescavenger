@@ -75,7 +75,7 @@ do
     for i in $(seq 1 5)
     do
         echo "<td style='padding: 5px;'>" >> qr.html
-        echo "<div>" >> qr.html
+        echo "<div style='padding:10px;'>" >> qr.html
         echo "<span>$a</span>" >> qr.html
         echo "<img src='$a.png' style='border: solid 1px black;'><img>" >> qr.html
         echo "</div>" >> qr.html
